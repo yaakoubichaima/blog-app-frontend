@@ -11,7 +11,8 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
     BlogPreviewComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    
   ]
 })
 export class BlogsListPageModule { }

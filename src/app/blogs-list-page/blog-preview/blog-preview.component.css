@@ -1,0 +1,19 @@
+.icons {
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;           /* 👈 This 👌 */
+    /* align-items: flex-start; */ /* 👈 Instead of this */
+    padding: 0px 20px 70px;
+
+    margin-top: 50px;
+    
+}
+
+
+.upvoted{
+    background-color: rgb(215, 255, 176);
+}
+
+.downvoted{
+    background-color: rgb(255, 199, 197);
+}
