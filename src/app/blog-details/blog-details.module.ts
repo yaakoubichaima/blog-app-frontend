@@ -12,4 +12,6 @@ import { BlogDetailsComponent } from './blog-details.component';
     CommonModule
   ]
 })
-export class BlogDetailsModule { }
+export class BlogDetailsModule { 
+
+}
