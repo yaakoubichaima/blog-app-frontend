@@ -8,6 +8,8 @@ import { AppNavbarComponent } from './navbar/navbar.component';
 import { BlogsListPageComponent } from './blogs-list-page/blogs-list-page.component';
 import { BlogPreviewComponent } from './blogs-list-page/blog-preview/blog-preview.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { BlogFormComponent } from './blog-form/blog-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
     AppNavbarComponent,
     BlogsListPageComponent,
     BlogPreviewComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+    BlogFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

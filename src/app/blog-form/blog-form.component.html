@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col col-md-10">
+    <h3>New Blog</h3>
+    <hr>
+    <form [formGroup]="blogForm" (ngSubmit)="saveBlog(blogForm.value)">
+        <div class="mb-3  form-group">
+            <label for="blogTitle" class="form-label">Email address</label>
+            <input formControlName="blogTitle" type="text" class="form-control" id="blogTitle" placeholder="Blog Title">
+        </div>
+
+        <div class="mb-3  form-group">
+            <label for="blogAuthor" class="form-label">Author</label>
+            <input formControlName="blogAuthor"  type="text" class="form-control" id="blogAuthor" placeholder="Author Name">
+        </div>
+        
+        <!-- <div class="mb-3  form-group">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div> -->
+
+        <div class="mb-3 form-group">
+            <label for="blogContent" class="form-label">Content</label>
+            <textarea formControlName="blogContent"  class="form-control" id="blogContent" rows="3" placeholder=""></textarea>
+        </div>
+
+        <button type="button" class="btn btn-outline-danger" (click)="cancelForm()">Cancel</button>
+        <button type="submit" class="btn btn-outline-primary" >Submit</button>
+    </form>
+    </div>
+</div>
