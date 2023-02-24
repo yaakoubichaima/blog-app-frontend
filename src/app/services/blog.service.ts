@@ -20,6 +20,7 @@ export class BlogService {
   }
 
   updateBlog(id: number, value: any): Observable<Object> {
+      console.log(value)
     return this.http.put(`${this.baseUrl}${id}`, value);
   }
 

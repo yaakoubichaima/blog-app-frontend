@@ -22,11 +22,8 @@ export class BlogsListPageComponent implements OnInit {
     console.log(' before reloadData');
 
     this.blogs$ = this.blogService.getBlogList();
+    this.blogs$.subscribe(data => {
 
-    // this.blogs.subscribe({
-    //   next(value) {
-    //     console.log(value);
-    //   },
-    // });
+    })
   }
 }
