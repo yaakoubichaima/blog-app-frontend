@@ -10,6 +10,7 @@ import { BlogPreviewComponent } from './blogs-list-page/blog-preview/blog-previe
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlogService } from './services/blog.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule, 
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

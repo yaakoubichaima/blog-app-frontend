@@ -6,14 +6,19 @@ import { BlogFormComponent } from './blog-form/blog-form.component';
 import { BlogsListPageComponent } from './blogs-list-page/blogs-list-page.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'blogs', component: BlogsListPageComponent },
-  {path: 'blogdetails', component: BlogDetailsComponent},
-  {path: 'new', component: BlogFormComponent}
+  // { path: '', component: AppComponent },
+  {
+    path: 'blogs',
+    children: [
+      { path: 'preview', component: BlogsListPageComponent },
+      { path: 'details', component: BlogDetailsComponent },
+      { path: 'new', component: BlogFormComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
