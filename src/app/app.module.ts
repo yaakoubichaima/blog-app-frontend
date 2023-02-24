@@ -11,6 +11,7 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogService } from './services/blog.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BlogService } from './services/blog.service';
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [BlogService],
   bootstrap: [AppComponent]

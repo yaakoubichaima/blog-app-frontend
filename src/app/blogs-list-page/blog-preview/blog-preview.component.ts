@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Blog } from 'src/app/models/blog.model';
 
 @Component({
   selector: 'blog-preview',
@@ -6,26 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog-preview.component.css'],
 })
 export class BlogPreviewComponent {
-  blog: any = {
-    title: 'Title',
-    author: 'AuthorName',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    upVotes: 1,
-    downVotes: 2,
-    upvoted:  false,
-    downvoted:  false,
-  };
+  @Input() blog!: Blog;
+    upvoted:  boolean = false
+    downvoted:  boolean = false
+
+  // blog: any = {
+  //   title: 'Title',
+  //   author: 'AuthorName',
+  //   content:
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  //   upVotes: 1,
+  //   downVotes: 2,
+  //   upvoted:  false,
+  //   downvoted:  false,
+  // };
   
   upvote() {
-    if (this.blog.upvoted) {
+    if (this.upvoted) {
       this.blog.upVotes--;
-      this.blog.upvoted=false;
+      this.upvoted=false;
     } else {
       this.blog.upVotes++;
-      this.blog.upvoted =true;
-      if (this.blog.downvoted){
-        this.blog.downvoted=false;
+      this.upvoted =true;
+      if (this.downvoted){
+        this.downvoted=false;
         this.blog.downVotes--;
       }
       
@@ -34,14 +39,14 @@ export class BlogPreviewComponent {
   }
 
   downvote() {
-    if (this.blog.downvoted) {
+    if (this.downvoted) {
       this.blog.downVotes--;
-      this.blog.downvoted=false;
+      this.downvoted=false;
     } else {
       this.blog.downVotes++;
-      this.blog.downvoted =true;
-      if (this.blog.upvoted){
-        this.blog.upvoted=false;
+      this.downvoted =true;
+      if (this.upvoted){
+        this.upvoted=false;
         this.blog.upVotes--;
       }
     }

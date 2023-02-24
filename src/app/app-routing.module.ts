@@ -7,10 +7,11 @@ import { BlogsListPageComponent } from './blogs-list-page/blogs-list-page.compon
 
 const routes: Routes = [
   // { path: '', component: AppComponent },
+  { path: 'preview', component: BlogsListPageComponent },
+
   {
     path: 'blogs',
     children: [
-      { path: 'preview', component: BlogsListPageComponent },
       { path: 'details', component: BlogDetailsComponent },
       { path: 'new', component: BlogFormComponent },
     ],

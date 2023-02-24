@@ -5,10 +5,10 @@
   }">
     
       <div class="card-body">
-        <h5 class="card-title">{{ blog.title }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">By {{ blog.author }}</h6>
+        <h5 class="card-title">{{ blog.blogTitle }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">By {{ blog.blogAuthor }}</h6>
         <p class="card-text">
-          {{ blog.content | slice : 0 : 200 }}...
+          {{ blog.blogContent | slice : 0 : 200 }}...
           <a href="#" class="card-link" style="color: gray">Read more</a>
         </p>
       </div>
@@ -17,9 +17,9 @@
   <div class="col-md-2">
     <div class="icons">
       <span>{{ blog.upVotes }} </span>                                                
-       <button (click)="upvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-up" [ngStyle]="{'color': this.blog.upvoted ? 'green' : 'rgb(194, 194, 194)'}" ></i></button>
+       <button (click)="upvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-up" [ngStyle]="{'color': this.upvoted ? 'green' : 'rgb(194, 194, 194)'}" ></i></button>
       <br><br>
-      <span>{{ blog.downVotes }} </span><button (click)="downvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-down" [ngStyle]="{'color': this.blog.downvoted ? 'red' : 'rgb(194, 194, 194)'}"></i></button>
+      <span>{{ blog.downVotes }} </span><button (click)="downvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-down" [ngStyle]="{'color': this.downvoted ? 'red' : 'rgb(194, 194, 194)'}"></i></button>
     </div>
   </div>
 </div>
