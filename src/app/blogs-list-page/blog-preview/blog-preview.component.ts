@@ -25,14 +25,14 @@ export class BlogPreviewComponent {
   // };
 
   updateUpvotes(){
-    this.blogService.updateBlog(this.blog.id, this.blog)
+    this.blogService.updateBlog(this.blog._id, this.blog)
     .subscribe (data =>{
     }, error => console.log(error)
       );
   }
 
   updateDownvotes(){
-    this.blogService.updateBlog(this.blog.id, this.blog)
+    this.blogService.updateBlog(this.blog._id, this.blog)
     .subscribe (data =>{
     }, error => console.log(error)
       );
@@ -79,6 +79,6 @@ export class BlogPreviewComponent {
 
       }
     }
-    this.blogService.updateBlog(this.blog.id, this.blog);
+    this.blogService.updateBlog(this.blog._id, this.blog);
   }
 }

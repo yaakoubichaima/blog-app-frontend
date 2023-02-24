@@ -1,11 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Blog } from '../models/blog.model';
+import { BlogService } from '../services/blog.service';
 
 @Component({
   selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',
   styleUrls: ['./blog-details.component.css']
 })
-export class BlogDetailsComponent {
-  urls=["https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&w=1000&q=80","https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&w=1000&q=80","https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlYWx0aHklMjBmb29kfGVufDB8fDB8fA%3D%3D&w=1000&q=80"]
+export class BlogDetailsComponent implements OnInit{
+  id: any;
+  blog!: Blog;
+
+  constructor(private blogService: BlogService, private route: ActivatedRoute,){}
+  ngOnInit(){
+    this.blog= new Blog();
+    this.id = this.route.snapshot.params["id"];
+    this.getBlog()
+  }
+
+  getBlog() {
+
+    this.blogService.getBlogById(this.id).subscribe(data => {
+      this.blog =data;
+      console.log(data);
+
+    })}
+
 
 }

@@ -8,14 +8,9 @@ import { BlogsListPageComponent } from './blogs-list-page/blogs-list-page.compon
 const routes: Routes = [
   // { path: '', component: AppComponent },
   { path: 'preview', component: BlogsListPageComponent },
+  { path: 'new', component: BlogFormComponent },
+  { path: 'details/:id', component: BlogDetailsComponent }
 
-  {
-    path: 'blogs',
-    children: [
-      { path: 'details', component: BlogDetailsComponent },
-      { path: 'new', component: BlogFormComponent },
-    ],
-  },
 ];
 
 @NgModule({

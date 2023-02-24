@@ -11,7 +11,7 @@ export class BlogService {
 
   constructor(private http: HttpClient) { }
 
-  getConge(id: number): Observable<any> {
+  getBlogById(id: string): Observable<any> {
     return this.http.get(`${this.baseUrl}${id}`);
   }
 
@@ -19,12 +19,12 @@ export class BlogService {
     return this.http.post(`${this.baseUrl}`, blog);
   }
 
-  updateBlog(id: number, value: any): Observable<Object> {
+  updateBlog(id: string, value: any): Observable<Object> {
       console.log(value)
     return this.http.put(`${this.baseUrl}${id}`, value);
   }
 
-  deleteBlog(id: number): Observable<any> {
+  deleteBlog(id: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}${id}`, { responseType: 'text' });
   }
 

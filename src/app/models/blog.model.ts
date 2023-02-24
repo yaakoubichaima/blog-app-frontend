@@ -1,8 +1,8 @@
 export class Blog{
-    id!: number;
+    _id!: string;
     blogTitle!: string;
     blogAuthor!: string;
     blogContent!: string;
-    upVotes!: number;
-    downVotes!: number;
+    upVotes: number = 0;
+    downVotes: number = 0;
 }
