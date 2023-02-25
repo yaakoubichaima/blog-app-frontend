@@ -11,6 +11,7 @@ import { BlogService } from '../services/blog.service';
 export class BlogDetailsComponent implements OnInit{
   id: any;
   blog!: Blog;
+  clicked=true;
 
   constructor(private blogService: BlogService, private route: ActivatedRoute,){}
   ngOnInit(){
@@ -27,5 +28,8 @@ export class BlogDetailsComponent implements OnInit{
 
     })}
 
+    check(){
+      this.clicked=!this.clicked;
+    }
 
 }
