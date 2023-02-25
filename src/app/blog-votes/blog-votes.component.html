@@ -1,0 +1,5 @@
+<div class="icons">
+    <span>{{ blog.upVotes }} </span>                                                
+     <button (click)="upvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-up" [ngStyle]="{'color': this.upvoted ? 'green' : 'rgb(194, 194, 194)'}" ></i></button>
+    <span>{{ blog.downVotes }} </span><button (click)="downvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-down" [ngStyle]="{'color': this.downvoted ? 'red' : 'rgb(194, 194, 194)'}"></i></button>
+  </div>
