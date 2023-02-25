@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./blogs-list-page.component.css'],
 })
 
-export class BlogsListPageComponent implements OnInit {
+export class BlogsListPageComponent implements OnInit { 
   blogs$: Observable<Blog[]> = of([]);
 
   constructor(private blogService: BlogService, private router: Router) {}

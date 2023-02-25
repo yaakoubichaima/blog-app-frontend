@@ -9,18 +9,19 @@
         <h6 class="card-subtitle mb-2 text-muted">By {{ blog.blogAuthor }}</h6>
         <p class="card-text">
           {{ blog.blogContent | slice : 0 : 200 }}...
-          <a href="#" class="card-link" style="color: gray">Read more</a>
+          <a class="card-link" style="color: gray" class="clickBlog" [routerLink]="['/details', blog._id]">Read more</a>
         </p>
       </div>
 
   </div>
   <div class="col-md-2">
-    <div class="icons">
+    <!-- <div class="icons">
       <span>{{ blog.upVotes }} </span>                                                
        <button (click)="upvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-up" [ngStyle]="{'color': this.upvoted ? 'green' : 'rgb(194, 194, 194)'}" ></i></button>
       <br><br>
       <span>{{ blog.downVotes }} </span><button (click)="downvote()" class="btn btn-link"> <i class="fa-solid fa-thumbs-down" [ngStyle]="{'color': this.downvoted ? 'red' : 'rgb(194, 194, 194)'}"></i></button>
-    </div>
+    </div> -->
+    <app-blog-votes [blog]="blog"></app-blog-votes>
   </div>
 </div>
 <br />
