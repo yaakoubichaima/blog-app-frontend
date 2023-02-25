@@ -5,4 +5,5 @@ export class Blog{
     blogContent!: string;
     upVotes: number = 0;
     downVotes: number = 0;
+    imgUrl: String = "";
 }

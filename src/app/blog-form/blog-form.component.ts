@@ -22,22 +22,25 @@ export class BlogFormComponent implements OnInit {
     let blogTitle = new FormControl()
     let blogAuthor = new FormControl()
     let blogContent = new FormControl()
+    let imgUrl = new FormControl()
 
     this.blogForm = new FormGroup({
       blogTitle: blogTitle,
       blogAuthor: blogAuthor,
       blogContent: blogContent,
+      imgUrl:imgUrl
     })
   }
 
 
-  saveBlog(formValues: { blogTitle: string; blogAuthor: string; blogContent: string; }){
+  saveBlog(formValues: { blogTitle: string; blogAuthor: string; blogContent: string; imgUrl:string}){
 
     console.log(formValues);
     this.submitted = true;
     this.blog.blogTitle=formValues.blogTitle;
     this.blog.blogAuthor=formValues.blogAuthor;
     this.blog.blogContent=formValues.blogContent;
+    this.blog.imgUrl=formValues.imgUrl;
 
     this.blogService.createBlog(this.blog).subscribe(data =>{ 
     },

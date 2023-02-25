@@ -5,13 +5,18 @@
     <hr>
     <form [formGroup]="blogForm" (ngSubmit)="saveBlog(blogForm.value)">
         <div class="mb-3  form-group">
-            <label for="blogTitle" class="form-label">Email address</label>
+            <label for="blogTitle" class="form-label">Blog Title</label>
             <input formControlName="blogTitle" type="text" class="form-control" id="blogTitle" placeholder="Blog Title">
         </div>
 
         <div class="mb-3  form-group">
             <label for="blogAuthor" class="form-label">Author</label>
             <input formControlName="blogAuthor"  type="text" class="form-control" id="blogAuthor" placeholder="Author Name">
+        </div>
+
+        <div class="mb-3  form-group">
+            <label for="imgUrl" class="form-label">Blog Image URL</label>
+            <input formControlName="imgUrl"  type="text" class="form-control" id="imgUrl" placeholder="URL">
         </div>
         
         <!-- <div class="mb-3  form-group">
