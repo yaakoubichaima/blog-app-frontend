@@ -12,6 +12,8 @@ import { BlogFormComponent } from './blog-form/blog-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogService } from './services/blog.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogVotesComponent } from './blog-votes/blog-votes.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     BlogsListPageComponent,
     BlogPreviewComponent,
     BlogDetailsComponent,
-    BlogFormComponent
+    BlogFormComponent,
+    BlogVotesComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
