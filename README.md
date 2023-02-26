@@ -14,9 +14,9 @@ To get started with the application, follow these steps:
 
 2/ Install Node.js v19 and Angular CLI v15.1.6.
 
-3/ Open a terminal in the root directory of the project and run 'npm install' to install the dependencies.
+3/ Open a terminal in the root directory of the project and run `npm install` to install the dependencies.
 
-4/ Run "ng serve" to start the development server.
+4/ Run `ng serve` to start the development server.
 
 5/Navigate to http://localhost:4200/ in your browser to view the application.
 
