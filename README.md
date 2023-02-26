@@ -5,12 +5,13 @@ This is a repository for the frontend code of a blog application built using Ang
 
 ## Technologies used
 Node.js v19
+
 Angular CLI v15.1.6
 
 ## Getting started
 To get started with the application, follow these steps:
 
-1/ Clone this repository to your local machine.
+1/ Clone this repository to your local machine `git clone https://github.com/yaakoubichaima/blog-app-frontend.git`
 
 2/ Install Node.js v19 and Angular CLI v15.1.6.
 
