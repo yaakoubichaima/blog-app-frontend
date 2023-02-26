@@ -1,27 +1,56 @@
 # BlogApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+##Blog App Frontend using Angular
+This is a repository for the frontend code of a blog application built using Angular. The application allows users to view blog posts, create new posts, edit existing posts, and delete posts. It also includes features such as user authentication and authorization, pagination, and sorting.
 
-## Development server
+##Technologies used
+Node.js v19
+Angular CLI v15.1.6
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##Getting started
+To get started with the application, follow these steps:
 
-## Code scaffolding
+1/ Clone this repository to your local machine.
+2/ Install Node.js v19 and Angular CLI v15.1.6.
+3/ Open a terminal in the root directory of the project and run npm install to install the dependencies.
+4/ Run ng serve to start the development server.
+5/Navigate to http://localhost:4200/ in your browser to view the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##Structure of the project
+The project is structured as follows:
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+├── src/
+│   ├── app/
+│   │   ├── navbar/
+│   │   ├── home-page/
+│   │   ├── blog-list/
+│   │   ├── blog-details/
+│   │   ├── blog-form/
+│   │   ├── services/
+│   │   ├── models/
+│   │   └── app-routing.module.ts
+│   │   └── app.component.html
+│   │   └── app.component.ts
+│   │   └── app.component.css
+│   │   └── app.module.ts
+│   ├── assets/
+│   ├── environments/
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   └── styles.css
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
 
-## Running unit tests
+The src directory contains the source code of the application. The app directory contains the main components, services, and models of the application. The assets directory contains static assets such as images and fonts. The environments directory contains environment-specific configuration files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##Contributing
+If you would like to contribute to the project, feel free to submit a pull request. Before submitting a pull request, please make sure that your code follows the style and formatting conventions used in the project.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
