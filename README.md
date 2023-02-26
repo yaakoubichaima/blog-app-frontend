@@ -14,9 +14,9 @@ To get started with the application, follow these steps:
 
 2/ Install Node.js v19 and Angular CLI v15.1.6.
 
-3/ Open a terminal in the root directory of the project and run **npm install** to install the dependencies.
+3/ Open a terminal in the root directory of the project and run 'npm install' to install the dependencies.
 
-4/ Run ng serve to start the development server.
+4/ Run 'ng serve' to start the development server.
 
 5/Navigate to http://localhost:4200/ in your browser to view the application.
 
@@ -76,8 +76,7 @@ The project is structured as follows:
 
 The src directory contains the source code of the application. The app directory contains the main components, services, and models of the application. The assets directory contains static assets such as images and fonts. The environments directory contains environment-specific configuration files.
 
-## Contributing
-If you would like to contribute to the project, feel free to submit a pull request. Before submitting a pull request, please make sure that your code follows the style and formatting conventions used in the project.
+
 
 
 
