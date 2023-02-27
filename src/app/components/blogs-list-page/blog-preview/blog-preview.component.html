@@ -1,0 +1,29 @@
+<div class="row">
+  <div
+    class="card col-md-8"
+    [ngClass]="{
+      upvoted: blog.upVotes > blog.downVotes,
+      downvoted: blog.upVotes < blog.downVotes
+    }"
+  >
+    <div class="card-body">
+      <h5 class="card-title">{{ blog.blogTitle }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">By {{ blog.blogAuthor }}</h6>
+      <p class="card-text">
+        {{ blog.blogContent | slice : 0 : 200 }}...
+        <a
+          class="card-link"
+          style="color: gray"
+          class="clickBlog"
+          [routerLink]="['/details', blog._id]"
+          >Read more</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <app-blog-votes [blog]="blog"></app-blog-votes>
+  </div>
+</div>
+<br />
+<br />
