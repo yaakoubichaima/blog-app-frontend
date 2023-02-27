@@ -30,15 +30,7 @@ The project is structured as follows:
 
 │   ├── app/
 
-│   │   ├── navbar/
-
-│   │   ├── home-page/
-
-│   │   ├── blog-list/
-
-│   │   ├── blog-details/
-
-│   │   ├── blog-form/
+│   │   ├── components/
 
 │   │   ├── services/
 
@@ -46,11 +38,7 @@ The project is structured as follows:
 
 │   │   └── app-routing.module.ts
 
-│   │   └── app.component.html
-
 │   │   └── app.component.ts
-
-│   │   └── app.component.css
 
 │   │   └── app.module.ts
 
