@@ -78,6 +78,9 @@ The project is structured as follows:
 The src directory contains the source code of the application. The app directory contains the main components, services, and models of the application. The assets directory contains static assets such as images and fonts. The environments directory contains environment-specific configuration files.
 
 
+## Demo photos and video
+
+Drive link: https://drive.google.com/drive/folders/1nhALbKgWkBFeJSPpdULdDZ7KeWXng6Kl?usp=share_link
 
 
 
