@@ -1,10 +1,8 @@
 pipeline {
-    // agent {
-    //     docker {
-    //         image 'node:14'
-    //         args '-u root'
-    //     }
-    // }
+    agent any
+    tools {
+        nodejs "NodeJS"
+    }
     stages {
         stage('Checkout') {
             steps {
